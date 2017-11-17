@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * Created by jroberts3136 on 11/10/17.
  */
-public class School{
+public class School /*implements Comparable<School>*/{
     public String [] schoolData;
 //    public String schoolID;
     public String schoolName;
@@ -16,6 +16,7 @@ public class School{
     public int readingScore;
     public int writingScore;
     public int compositeScore = 0;
+    public int comparison;
     public boolean hasSat;
 
     public School(String a){
@@ -63,4 +64,11 @@ public class School{
         return hasSat;
     }
 
+    /*
+    @Override       //Sets .sort to work on composite score
+    public int compareTo(School o) {
+        comparison = o.compositeScore - this.compositeScore;        //Descending order
+        return comparison;
+    }
+    */
 }
